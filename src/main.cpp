@@ -14,7 +14,31 @@ void setup() {
     led::init();
     display::init();
 
+    display::clearDisplay();
+    display::println("Chaos.JETZT! #9");
+    display::println("26.05.2025 in Leipzig");
+    display::println("");
+    display::println("ESP-C3 - v1.0");
+    display::display();
 
+    // Six example options
+    const char* options[] = {
+        "Lion",
+        "Tiger",
+        "Bear",
+        "Elephant",
+        "Giraffe",
+        "Zebra"
+    };
+    int todo = display::makeMenu("Button Test", options, 6);
+    display::clearDisplay();
+
+    // Print Result
+    display::print("Selected Option: ");
+    display::println(String(todo));
+    display::println(options[todo]);
+    display::display();
+    delay(3000);
 }
 
 

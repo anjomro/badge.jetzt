@@ -40,6 +40,9 @@ namespace display
     void drawMenu(const char* options[], int numOptions, int selected);
     inline int mod(int a, int b) { return (a % b + b) % b; }
 
+
+    void drawSplashImage();
+    void setTextColor(uint16_t foreground, uint16_t background);
 }
 
 #endif //DISPLAY_H

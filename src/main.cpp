@@ -2,7 +2,7 @@
 
   Eine eigene Anwendung entwickeln in 4 Schritten:
 
-  1. Eine Methode nach den Beispielen in example_apps.ino anlegen. Entweder dort, oder in einer neuen .ino-Datei
+  1. Eine Methode nach den Beispielen unten anlegen. Entweder da, oder in einer neuen Datei
     - Die Anwendung muss eine blockierende Funktion sein. (z.B. mit delay()-Funktion, oder while-Schleife)
     - Mit einem return aus der Methode, wird die Anwendung beendet
   2. Vorwärtsdeklaration in dieser Datei (siehe unten) einfügen, damit der Compiler schon von von Anfang an die Signatur der Methode kennt.

@@ -23,7 +23,7 @@
 
 **Debian**: TODO
 
-**Nix**: TODO
+**Nix**:
 ```Bash
 git clone 'https://github.com/anjomro/badge.jetzt/tree/docs'
 nix develop

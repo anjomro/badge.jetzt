@@ -15,7 +15,7 @@
    3. Upload the project, run `pio run -t upload`
 
 ![ESP-C3 with PCB](images/esp_with_pcb_separated.jpg "ESP-C3 with PCB separated")
-![ESP-C3 with PCB soldered](images/esp_with_pcb_soldered "ESP-C3 with PCB soldered")
+![ESP-C3 with PCB soldered](images/esp_with_pcb_soldered.jpg "ESP-C3 with PCB soldered")
 ![PCB front with display](images/pcb_with_display.jpg "PCB with display soldered on ti")
 
  

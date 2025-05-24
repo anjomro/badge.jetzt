@@ -23,22 +23,19 @@
 
 **Debian/Ubuntu**: 
 
- 1. PlatformIO installieren ([Platformio install] (https://docs.platformio.org/en/latest/core/installation/methods/installer-script.html)) 
-         Zum Beispiel:
-          i. wget -O get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
-          ii. python3 get-platformio.py
-2. Repo klonen: git clone https://github.com/anjomro/badge.jetzt.git
-3. add PlatformIO Core binary directory to the system environment PATH variable (im bashrc)
-          Zum Beispiel
-           i. nano .bashrc
-           ii. ganz unten export PATH="$PATH:Your/Path/To/PlatformIO/bin/directory" hinzufügen
-           iii. source .bashrc
-4. udev rules installieren (https://docs.platformio.org/en/latest/core/installation/udev-rules.html)
-         Zum Beispiel
-           i. curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/system/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
-           ii. sudo service udev restart
-           iii. physically unplug and reconnect your board
-5. im badge.jetzt directory "pio run -t upload" ausführen
+ 1. PlatformIO installieren ([Platformio install](https://docs.platformio.org/en/latest/core/installation/methods/installer-script.html)), zum Beispiel:
+    1. `wget -O get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py`
+    2.  `python3 get-platformio.py`
+2. Repo klonen: `git clone https://github.com/anjomro/badge.jetzt.git`
+3. add PlatformIO Core binary directory to the system environment PATH variable (im bashrc), zum Beispiel
+   1. `nano .bashrc`
+   2. ganz unten `export PATH="$PATH:Your/Path/To/PlatformIO/bin/directory"` hinzufügen
+   3. `source .bashrc`
+4. udev rules [siehe Anleitung installieren](https://docs.platformio.org/en/latest/core/installation/udev-rules.html), zum Beispiel
+   1. `curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/system/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules`
+   2. `sudo service udev restart`
+   3. physically unplug and reconnect your board
+5. im badge.jetzt directory `pio run -t upload` ausführen
 
 **Nix**:
 ```Bash

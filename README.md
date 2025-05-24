@@ -24,3 +24,8 @@
 **Debian**: TODO
 
 **Nix**: TODO
+```Bash
+git clone 'https://github.com/anjomro/badge.jetzt/tree/docs'
+nix develop
+pio run -t upload
+```

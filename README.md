@@ -21,7 +21,24 @@
 ## PlatformIO on different Systems:
 **Arch**: `sudo pacman -Sy platformio-core`
 
-**Debian**: TODO
+**Debian/Ubuntu**: 
+
+ 1. PlatformIO installieren ([Platformio install] (https://docs.platformio.org/en/latest/core/installation/methods/installer-script.html)) 
+         Zum Beispiel:
+          i. wget -O get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
+          ii. python3 get-platformio.py
+2. Repo klonen: git clone https://github.com/anjomro/badge.jetzt.git
+3. add PlatformIO Core binary directory to the system environment PATH variable (im bashrc)
+          Zum Beispiel
+           i. nano .bashrc
+           ii. ganz unten export PATH="$PATH:Your/Path/To/PlatformIO/bin/directory" hinzufügen
+           iii. source .bashrc
+4. udev rules installieren (https://docs.platformio.org/en/latest/core/installation/udev-rules.html)
+         Zum Beispiel
+           i. curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/system/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
+           ii. sudo service udev restart
+           iii. physically unplug and reconnect your board
+5. im badge.jetzt directory "pio run -t upload" ausführen
 
 **Nix**:
 ```Bash

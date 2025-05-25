@@ -46,6 +46,13 @@ namespace display
         return SCREEN_HEIGHT / getCurrentCharHeight();
     }
 
+    void setTextColor(uint16_t foreground, uint16_t background) {
+        oled.setTextColor(foreground, background);
+    }
+
+    void drawImage(const unsigned char bitmap [] PROGMEM) {
+        oled.drawBitmap(0, 0, bitmap, 128, 32, SSD1306_WHITE);
+    }
 
     int makeMenu(const char* title, const char* options[], int numOptions)
     {

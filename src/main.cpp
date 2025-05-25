@@ -5,6 +5,7 @@
 #include "base/button.h"
 #include "base/pins.h"
 #include "etherbloom/mandelbrot.h"
+#include "irrlicht/menusystem/menusystem.h"
 
 void button_test();
 
@@ -28,9 +29,10 @@ void setup() {
     // Six example options
     const char* options[] = {
         "Button Test",
-        "Mandelbrot"
+        "Mandelbrot",
+        "Y.A.M.S",
     };
-    choice = display::makeMenu("Menu Test", options, 2);
+    choice = display::makeMenu("Menu Test", options, 3);
 
     display::clearDisplay();
     // Workaround due to weird print and println shifts
@@ -51,6 +53,9 @@ void loop() {
         break;
         case 1:
             mandelbrot::print_mandelbrot_set();
+        break;
+        case 2:
+            menusystem::launch();
         break;
     }
 }

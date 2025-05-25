@@ -4,7 +4,11 @@
 #include "base/led.h"
 #include "base/button.h"
 #include "base/pins.h"
+#include "etherbloom/mandelbrot.h"
 
+void button_test();
+
+int choice;
 
 void setup() {
     Serial.begin(115200);
@@ -23,27 +27,35 @@ void setup() {
 
     // Six example options
     const char* options[] = {
-        "Lion",
-        "Tiger",
-        "Bear",
-        "Elephant",
-        "Giraffe",
-        "Zebra"
+        "Button Test",
+        "Mandelbrot"
     };
-    int todo = display::makeMenu("Button Test", options, 6);
-    display::clearDisplay();
+    choice = display::makeMenu("Menu Test", options, 2);
 
-    // Print Result
-    display::print("Selected Option: ");
-    display::println(String(todo));
-    display::println(options[todo]);
+    display::clearDisplay();
+    // Workaround due to weird print and println shifts
+    display::println("Selected: " + String(options[choice]));
+    display::println("");
+    display::println("Waiting for 2 seconds");
     display::display();
-    delay(3000);
+    delay(2000);
 }
 
 
-
 void loop() {
+    display::clearDisplay();
+
+    switch (choice) {
+        case 0:
+            button_test();
+        break;
+        case 1:
+            mandelbrot::print_mandelbrot_set();
+        break;
+    }
+}
+
+void button_test() {
     String msg_l = "";
     String msg_r = "";
 

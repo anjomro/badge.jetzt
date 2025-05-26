@@ -39,7 +39,8 @@
 
 **Nix**:
 ```Bash
-git clone 'https://github.com/anjomro/badge.jetzt/tree/docs'
+git clone 'https://github.com/anjomro/badge.jetzt'
+cd badge.jetzt
 nix develop
 pio run -t upload
 ```
